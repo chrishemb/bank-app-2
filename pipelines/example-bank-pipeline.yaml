@@ -95,7 +95,7 @@ spec:
           value: >
             oc apply -f
             https://raw.githubusercontent.com/IBM/example-bank/main/bank-app-backend/transaction-service/deployment.yaml
-            -n dev-cjh-1
+            -n dev-cjh-2
       runAfter:
         - build-transaction
       taskRef:
@@ -107,7 +107,7 @@ spec:
           value: >
             oc apply -f
             https://raw.githubusercontent.com/IBM/example-bank/main/bank-app-backend/user-service/deployment.yaml
-            -n dev-cjh-1
+            -n dev-cjh-2
       runAfter:
         - build-user
       taskRef:
@@ -119,9 +119,9 @@ spec:
           value: >
             oc apply -f
             https://raw.githubusercontent.com/IBM/example-bank/main/deployment.yaml
-            -n dev-cjh-1
+            -n dev-cjh-2
       runAfter:
-        - build-transaction
+        - build-ui
       taskRef:
         kind: Task
         name: openshift-client

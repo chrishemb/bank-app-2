@@ -5,7 +5,7 @@ metadata:
   generateName: bank-run-
 spec:
   pipelineRef:
-    name: example-bank
+    name: bank-app
   resources:
   - name: bank-git
     resourceSpec:
